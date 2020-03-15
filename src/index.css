@@ -1,0 +1,183 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  width: 100%;
+min-width: 360px;
+height: 100vh;
+max-height: 720px;
+background: #E6EAEA;
+}
+
+.App .sidepanel {
+  float: left;
+  width: 30%;
+  height: 100%;
+  background: #2c3e50;
+  color: #f5f5f5;
+  overflow: hidden;
+  position: relative;
+}
+
+.App .sidepanel .room-list {
+  height: calc(100% - 177px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.App .sidepanel .room-list.expanded {
+  height: calc(100% - 334px);
+}
+.App .sidepanel .room-list::-webkit-scrollbar {
+  width: 8px;
+  background: #2c3e50;
+}
+.App .sidepanel .room-list::-webkit-scrollbar-thumb {
+  background-color: #243140;
+}
+.App .sidepanel .room-list ul li.rooms {
+  position: relative;
+  padding: 10px 0 15px 0;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+.App .sidepanel .room-list ul li.rooms:hover {
+  background: #32465a;
+}
+.App .sidepanel .room-list ul li.rooms.active {
+  background: #32465a;
+  border-right: 5px solid #435f7a;
+}
+.App .sidepanel .room-list ul li.rooms.active .wrap .meta .name {
+  color: white;
+}
+.App .sidepanel .room-list ul li.rooms .wrap {
+  width: 88%;
+  margin: 0 auto;
+  position: relative;
+}
+.App .sidepanel .room-list ul li.rooms .wrap .meta {
+  padding: 5px 0 0 0;
+}
+.App .sidepanel .room-list ul li.rooms .wrap .meta .name {
+  font-weight: 600;
+}
+ul{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+	color: darkgray;
+}
+.App .sidepanel .createRoom {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+.App .content {
+  float: right;
+  width: 70%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.App .content .message-list {
+  height: auto;
+  min-height: calc(100% - 93px);
+  max-height: calc(100% - 93px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.App .content .message-list::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+.App .content .message-list::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.App .content .message-list ul li {
+  display: inline-block;
+  clear: both;
+  float: left;
+  margin: 15px 15px 5px 15px;
+  width: calc(100% - 25px);
+  font-size: 0.9em;
+}
+.App .content .message-list ul li:nth-last-child(1) {
+  margin-bottom: 20px;
+}
+.App .content .message-list ul li.sent .message-username {
+  margin: 6px 8px 0 0;
+}
+.App .content .message-list ul li.sent p {
+  background: #435f7a;
+  color: #f5f5f5;
+}
+.App .content .message-list ul li.replies .message-username {
+  float: right;
+  margin: 6px 0 0 8px;
+}
+.App .content .message-list ul li.replies p {
+  background: #f5f5f5;
+  float: right;
+}
+.App .content .message-list ul li img {
+  width: 22px;
+  border-radius: 50%;
+  float: left;
+}
+.App .content .message-list ul li p {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 205px;
+  line-height: 130%;
+}
+.App .content .message-input {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 99;
+}
+.App .content .message-input .wrap {
+  position: relative;
+}
+.App .content .message-input .wrap input {
+  font-family: "proxima-nova",  "Source Sans Pro", sans-serif;
+  float: left;
+  border: none;
+  width: calc(100% - 90px);
+  padding: 11px 32px 10px 8px;
+  font-size: 0.8em;
+  color: #32465a;
+}
+.App .sidepanel .createRoom .new-room-form {
+  position: relative;
+}
+.App .sidepanel .createRoom .new-room-form input {
+  font-family: "proxima-nova",  "Source Sans Pro", sans-serif;
+  float: left;
+  border: none;
+  width: calc(100% - 90px);
+  padding: 11px 32px 10px 8px;
+  font-size: 0.8em;
+  color: #32465a;
+}
+.sent{
+	width: auto !important;
+}
+.join-room{
+	font-size: 43px;
+}
